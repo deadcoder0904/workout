@@ -48,7 +48,7 @@ switch (workout.toLowerCase()) {
     break;
 }
 
-let result = `/workout `;
+let result = `/workout ${titlecase(workout)} Workout \n`;
 
 workouts.forEach(name => {
   result += `30 secs ${titlecase(name)}\n`;

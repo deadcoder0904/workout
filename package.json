@@ -1,6 +1,6 @@
 {
   "name": "7-min-workout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get Workouts Name of 7 minutes workout app",
   "main": "index.js",
   "dependencies": {
