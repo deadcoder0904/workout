@@ -1,0 +1,23 @@
+{
+  "name": "7-min-workout",
+  "version": "1.0.0",
+  "description": "Get Workouts Name of 7 minutes workout app",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "clipboardy": "^1.2.2",
+    "meow": "^4.0.0",
+    "titlecase": "^1.1.2"
+  },
+  "bin": {
+    "workout": "./index.js"
+  },
+  "preferGlobal": true,
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["workout", "7minutes", "hiit"],
+  "author": "Akshay Kadam",
+  "license": "MIT"
+}
