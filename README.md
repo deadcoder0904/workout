@@ -1,6 +1,6 @@
 # workout
 
-> Get Workout names for [7 minutes Workout App](https://play.google.com/store/apps/details?id=com.popularapp.sevenmins&hl=en)
+> Get Workout names for [7 minutes Workout Android App](https://play.google.com/store/apps/details?id=com.popularapp.sevenmins&hl=en)
 
 ## Install
 
@@ -10,10 +10,21 @@ $ npm install --global 7-min-workout
 
 ## Usage
 
-Goto the project root & run
-
 ```
 $ workout
+
+  Get Workouts Name of 7 minutes workout app
+
+  Usage
+  	$ workout <name>
+
+  Examples
+  	$ workout abs
+  	Abs Workout copied to clipboard 🤸‍
+
+  API
+  	name
+  	Values: classic | abs | butt | leg | arm | sleepy
 ```
 
 ## Contributing
