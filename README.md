@@ -16,15 +16,21 @@ $ workout
   Get Workouts Name of 7 minutes workout app
 
   Usage
-  	$ workout <name>
+        $ workout <name>|<random>
 
   Examples
-  	$ workout abs
-  	Abs Workout copied to clipboard 🤸‍
+        $ workout abs
+    Abs Workout copied to clipboard 🤸‍
+
+        $ workout 2
+        Abs & Leg
 
   API
-  	name
-  	Values: classic | abs | butt | leg | arm | sleepy
+    name
+    Values: classic | abs | butt | leg | arm | sleepy
+
+    random
+    Values: min = 1, max = 6
 ```
 
 ## Contributing

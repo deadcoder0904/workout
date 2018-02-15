@@ -9,20 +9,47 @@ const { classic, abs, butt, leg, arm, sleepy } = require("./data");
 const cli = meow(
   chalk`
 {yellow.bold Usage}
-	$ workout <name>
+	$ workout <name>|<random>
 
 {yellow.bold Examples}
 	$ workout abs
-	Abs Workout copied to clipboard 🤸‍
+  Abs Workout copied to clipboard 🤸‍
+  
+	$ workout 2
+	Abs & Leg
 	
 {yellow.bold API}
-	{white name}
-	Values: {dim classic | abs | butt | leg | arm | sleepy}
+  {white name}
+  Values: {dim classic | abs | butt | leg | arm | sleepy}
+  
+  {white random}
+  Values: {dim min = 1, max = 6}
 `
 );
 
 let workouts;
 const workout = cli.input[0] || "";
+
+const randomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+if (workout && workout == +workout) {
+  if (workout > 0 && workout < 7) {
+    const workoutsName = ["classic", "abs", "butt", "leg", "arm", "sleepy"];
+    let randomWorkouts = `\n`,
+      random;
+    for (let index = 0; index < workout - 1; index++) {
+      random = randomInt(0, workoutsName.length - 1);
+      randomWorkouts += `${titlecase(workoutsName[random])} & `;
+      workoutsName.splice(random, 1);
+    }
+    random = randomInt(0, workoutsName.length - 1);
+    randomWorkouts += titlecase(workoutsName[random]);
+    console.log(chalk.yellow.bold(`${randomWorkouts}\n`));
+  } else {
+    console.log(chalk.red.bold(`\nWorkout number should be between 1 & 6\n`));
+  }
+  process.exit(0);
+}
 
 switch (workout.toLowerCase()) {
   case "classic":
